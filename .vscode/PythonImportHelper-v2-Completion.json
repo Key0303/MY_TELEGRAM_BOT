@@ -13,7 +13,16 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def send_welcome(message):\n    bot.reply_to(message, \"Howdy, how are you doing?\")\n@bot.message_handler(func=lambda m: True)\ndef echo_all(message):\n    bot.reply_to(message, message.text)\nbot.infinity_polling()",
+        "peekOfCode": "def send_welcome(message):\n    bot.reply_to(message, \"Olá, Tudo bem ?\")\n@bot.message_handler(commands=['help'])\ndef send_welcome(message):\n    bot.reply_to(message, \"Como posso ajudalo-lo ?\")\n@bot.message_handler(func=lambda m: True)\ndef echo_all(message):\n    bot.reply_to(message, message.text)\nbot.infinity_polling()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "send_welcome",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def send_welcome(message):\n    bot.reply_to(message, \"Como posso ajudalo-lo ?\")\n@bot.message_handler(func=lambda m: True)\ndef echo_all(message):\n    bot.reply_to(message, message.text)\nbot.infinity_polling()",
         "detail": "app",
         "documentation": {}
     },
@@ -31,7 +40,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "bot = telebot.TeleBot(\"8138845345:AAF8-3fr5tqnG8tQlp3pfBCnRcRuAmKnmtM\",parse_mode=None)\n@bot.message_handler(commands=['start', 'help'])\ndef send_welcome(message):\n    bot.reply_to(message, \"Howdy, how are you doing?\")\n@bot.message_handler(func=lambda m: True)\ndef echo_all(message):\n    bot.reply_to(message, message.text)\nbot.infinity_polling()",
+        "peekOfCode": "bot = telebot.TeleBot(\n    \"8138845345:AAF8-3fr5tqnG8tQlp3pfBCnRcRuAmKnmtM\", parse_mode=None)\n@bot.message_handler(commands=['start'])\ndef send_welcome(message):\n    bot.reply_to(message, \"Olá, Tudo bem ?\")\n@bot.message_handler(commands=['help'])\ndef send_welcome(message):\n    bot.reply_to(message, \"Como posso ajudalo-lo ?\")\n@bot.message_handler(func=lambda m: True)\ndef echo_all(message):",
         "detail": "app",
         "documentation": {}
     }
