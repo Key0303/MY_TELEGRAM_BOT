@@ -2,7 +2,7 @@ import telebot
 
 # You can set parse_mode by default. HTML or MARKDOWN
 bot = telebot.TeleBot(
-    "8138845345:AAF8-3fr5tqnG8tQlp3pfBCnRcRuAmKnmtM", parse_mode=None)
+    "", parse_mode=None)
 
 
 @bot.message_handler(commands=['start'])
